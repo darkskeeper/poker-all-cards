@@ -1,11 +1,10 @@
-#include <QCoreApplication>
-#include <string>
-#include <iostream>
 #include <vector>
+#include <iostream>
+#include <string>
 using namespace std;
-int main(int argc, char *argv[])
+
+int main()
 {
-    QCoreApplication a1(argc, argv);
     int Ntests;
     cin >> Ntests;
     while( (Ntests--) != 0 )
@@ -93,7 +92,7 @@ int main(int argc, char *argv[])
                         min = your_cards[i]%13;
                     }
                 }
-
+                
                 if(max-min == 4)
                 {
                     is_straight = true;
@@ -176,5 +175,5 @@ int main(int argc, char *argv[])
         }
         cout << endl;
     }
-    return a1.exec();
+    return 0;
 }

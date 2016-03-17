@@ -96,6 +96,21 @@ int main()
                 else
                 {
                     is_straight = false;
+                    if ( max == 12 )
+                    {
+                        max = 0;
+                        for ( int i = 1 ; i < 5 ; i++ )
+                        {
+                            if( your_cards[i] % 13 > max && your_cards[i] % 13 != 12)
+                            {
+                                max = your_cards[i]%13;
+                            }
+                        }
+                        if ( max == 3 )
+                        {
+                            is_straight = true;
+                        }
+                    }
                 }
                 if (is_straight == false && is_flash == false)
                 {
@@ -156,6 +171,5 @@ int main()
         }
         cout << endl;
     }
-    system("pause");
     return 0;
 }
